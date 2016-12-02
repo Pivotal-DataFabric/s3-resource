@@ -257,7 +257,7 @@ func (client *s3client) URL(bucketName string, remotePath string, private bool, 
 	var url string
 
 	if private {
-		url, _ = awsRequest.Presign(24 * time.Hour)
+		url, _ = awsRequest.Presign(7 * 24 * time.Hour)
 	} else {
 		awsRequest.Build()
 		url = awsRequest.HTTPRequest.URL.String()
