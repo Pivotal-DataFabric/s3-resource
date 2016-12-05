@@ -10,10 +10,10 @@ BUILD_DIR=$PWD/built-resource
 
 cd $GOPATH/src/github.com/concourse/s3-resource
 
-#go install ./vendor/github.com/onsi/ginkgo/ginkgo
+go install ./vendor/github.com/onsi/ginkgo/ginkgo
 
-#CGO_ENABLED=1 ginkgo -race -r -p "$@"
-echo "Skipping tests. Go see upstream for real test runs https://ci.concourse.ci/teams/main/pipelines/resources/jobs/s3-resource/builds/4"
+CGO_ENABLED=1 ginkgo -skipPackage integration -race -r -p "$@"
+echo "Skipping integration tests. Go see upstream for those test runs https://ci.concourse.ci/teams/main/pipelines/resources/jobs/s3-resource/builds/4"
 
 ./scripts/build
 
