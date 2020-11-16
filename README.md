@@ -1,4 +1,4 @@
-# S3 Resource
+<h1> VMware has ended active development of this project, this repository will no longer be updated.</h1><br># S3 Resource
 
 Versions objects in an S3 bucket, by pattern-matching filenames to identify
 version numbers.
